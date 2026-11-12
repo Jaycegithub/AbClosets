@@ -51,13 +51,15 @@
   .crumbs a{color:var(--muted);text-decoration:none} .crumbs a:hover{text-decoration:underline}
   .crumbs span{margin:0 6px}
   .chip{display:inline-block;background:var(--tint);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px}
-  h1{font-size:44px;line-height:1.15;color:var(--heading);margin:0 0 14px;font-weight:700;text-wrap:balance;letter-spacing:-.01em}
+  h1{font-size:40px;line-height:1.18;color:var(--heading);margin:0 0 14px;font-weight:700;text-wrap:balance;letter-spacing:-.01em}
   .dek{font-size:18px;color:var(--muted);margin:0 0 16px;max-width:60ch}
   .meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
   .avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;flex:none}
   .meta strong{color:var(--heading)}
   .meta .dot{opacity:.5}
   .hero-actions{display:flex;align-items:center;gap:16px;margin-top:16px;flex-wrap:wrap}
+  .byline-row{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+  .byline-row .hero-actions{margin-top:0}
   .hero-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:3/2;max-height:310px;width:100%;box-shadow:0 10px 30px rgba(30,38,51,.12)}
   .hero-img img{width:100%;height:100%;object-fit:cover}
 
@@ -132,6 +134,22 @@
   .card small{color:var(--green);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
   .card h3{font-size:16px;line-height:1.35;margin:6px 0 0;color:var(--heading)}
 
+  .inline-img{margin:8px 0 26px}
+  .inline-img img{width:100%;height:auto;border-radius:var(--radius)}
+  .table-wrap{overflow-x:auto;margin:6px 0 24px;border:1px solid var(--line);border-radius:var(--radius)}
+  .table-wrap table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;min-width:520px}
+  .table-wrap th{background:var(--navy);color:#fff;text-align:left;font-weight:500;padding:12px 14px}
+  .table-wrap td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+  .table-wrap tbody tr:nth-child(even){background:var(--bg-soft)}
+  .table-wrap td:first-child{font-weight:500;color:var(--heading)}
+  .cta-btns{display:flex;flex-direction:column;gap:10px}
+  .btn.ghost-light{background:transparent;border:1.5px solid rgba(255,255,255,.7);color:#fff}
+  .btn.ghost-light:hover{background:rgba(255,255,255,.12)}
+  .contact-band{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+  .contact-band p{margin:0 0 16px}
+  .contact-band .cta-btns{flex-direction:row;flex-wrap:wrap}
+  article ul li strong{color:var(--heading)}
+
   /* Sidebar */
   aside{display:flex;flex-direction:column;gap:24px}
   .box{border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden}
@@ -174,7 +192,7 @@
   @media (max-width:900px){
     .hero .wrap{grid-template-columns:1fr;gap:24px;padding-top:24px;padding-bottom:28px}
     .hero-img{aspect-ratio:16/9;max-height:none}
-    .layout{grid-template-columns:1fr;padding-top:28px}
+    .layout{grid-template-columns:minmax(0,1fr);padding-top:28px}
     article{max-width:none}
     .toc-inline{display:block}
     .toc-box{display:none}
@@ -191,6 +209,16 @@
     article h2{font-size:23px}
     .hero-actions .share .lbl{display:none}
     .inline-cta{grid-template-columns:1fr;padding:22px}
+    .contact-band .cta-btns{flex-direction:column}
+    .table-wrap{border:0;overflow:visible}
+    .table-wrap table{min-width:0}
+    .table-wrap thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .table-wrap tr{display:block;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;background:#fff!important;overflow:hidden}
+    .table-wrap td{display:grid;grid-template-columns:42% 1fr;gap:10px;border-top:1px solid var(--line);padding:9px 14px}
+    .table-wrap td::before{content:attr(data-label);font-weight:500;color:var(--muted);font-size:13px}
+    .table-wrap td:first-child{display:block;border-top:0;background:var(--navy);color:#fff}
+    .table-wrap td:first-child::before{display:none}
+    .contact-band .btn{width:100%}
     .author{grid-template-columns:1fr}
     .cards{grid-template-columns:1fr}
     .mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:55;box-shadow:0 -4px 16px rgba(0,0,0,.12)}
@@ -221,13 +249,14 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="crumbs"><a href="#">Home</a><span>›</span><a href="#">Blog</a><span>›</span>Hiring Guide</p>
-        <span class="chip">Hiring Guide · Broward County</span>
-        <h1>Who to Hire for a Custom Closet in Broward County</h1>
-        <p class="dek">Three things you can check before you sign: who makes the panels, who installs them, and who honors the warranty afterward.</p>
+        <p class="crumbs"><a href="#">Home</a><span>›</span><a href="#">Blog</a><span>›</span>Fort Lauderdale</p>
+        <span class="chip">Cost &amp; Planning Guide · Fort Lauderdale</span>
+        <h1>Custom Closets in Fort Lauderdale: Cost, Timeline, and How to Choose a Builder</h1>
+        <p class="dek">What custom closets cost, how long they take to install, and how to pick a builder you can trust.</p>
+        <div class="byline-row">
         <div class="meta">
           <div class="avatar" aria-hidden="true">PB</div>
-          <div>By <strong>Perry Birman</strong>, Founder<br><span>Updated Oct 14, 2026</span> <span class="dot">·</span> <span>12 min read</span></div>
+          <div>By <strong>Perry Birman</strong>, Founder<br><span>Updated Nov 12, 2026</span> <span class="dot">·</span> <span>11 min read</span></div>
         </div>
         <div class="hero-actions">
           <div class="share" aria-label="Share this article">
@@ -239,9 +268,10 @@
             <button type="button" class="copy" aria-label="Copy link"><svg viewBox="0 0 24 24"><path d="M10.6 13.4a1 1 0 0 0 1.4 0l4-4a3 3 0 0 0-4.2-4.2l-1.5 1.5 1.4 1.4 1.5-1.5a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 0 0 1.4zm2.8-2.8a1 1 0 0 0-1.4 0l-4 4a3 3 0 0 0 4.2 4.2l1.5-1.5-1.4-1.4-1.5 1.5a1 1 0 0 1-1.4-1.4l4-4a1 1 0 0 0 0-1.4z"/></svg></button>
           </div>
         </div>
+        </div>
       </div>
       <figure class="hero-img" style="margin:0">
-        <img src="https://www.abclosets.com/wp-content/uploads/2025/12/bc1.jpg" alt="Custom walk-in closet with wood shelving and hanging rods, built by American Built-In Closets" width="800" height="600">
+        <img src="https://www.abclosets.com/wp-content/uploads/2026/02/abc2.jpg" alt="Custom walk-in closet with built-in shelving and drawers in a Fort Lauderdale home" width="800" height="533">
       </figure>
     </div>
   </section>
@@ -254,66 +284,172 @@
         <ol id="tocInline"></ol>
       </details>
 
+      <p>Local projects typically start near $1,200 for a basic reach-in, while a fully featured walk-in runs about $4,500 to $8,000 or more.</p>
+      <figure class="inline-img">
+        <img src="https://www.abclosets.com/wp-content/uploads/2026/02/abc4-1.jpg" alt="Custom closet system with shelving and hanging space installed in a Fort Lauderdale home" width="624" height="348" loading="lazy">
+      </figure>
+      <p>American Built-In Closets, a closet design and manufacturing company based in Lauderdale Lakes, Florida, handles reach-in and <a href="#">walk-in closet design</a> projects across the city, and most single closets go in within one working day.</p>
+
       <div class="takeaways">
         <h2 id="key-takeaways">Key Takeaways</h2>
         <ul>
-          <li>Local manufacturing, in-house installation crews, and a direct warranty are three signals a homeowner can verify before booking any consultation.</li>
-          <li>American Built-In Closets prices Broward walk-in projects from $2,500 for a small walk-in to $8,000 and above for a fully featured one.</li>
-          <li>The FTC Cooling-Off Rule covers in-home sales of $25 or more, including invited presentations.</li>
-          <li>Line-item quotes reveal panel thickness, drawer construction, and hardware ratings that a single bundled number conceals.</li>
+          <li>Fort Lauderdale closet projects start near $1,200 for a basic reach-in, fully featured walk-ins run about $4,500 to $8,000 or more, and luxury builds pass $10,000.</li>
+          <li>Most reach-ins and standard walk-ins install in one working day, and large or luxury walk-ins can take two.</li>
+          <li>Since July 1, 2026, Fort Lauderdale can exempt some cosmetic single-family work under $7,500 from a building permit, but only with written approval; condos and electrical work are excluded.</li>
+          <li>The EPA recommends indoor relative humidity below 60%, ideally between 30% and 50%, a target that shapes closet material choices near the coast.</li>
         </ul>
       </div>
+      <div class="callout"><p>Sagging wire shelves and wasted ceiling height cost Fort Lauderdale homeowners storage every day. American Built-In Closets builds around each measured inch. <a href="#form">Request a free quote</a>.</p></div>
 
-      <p>Hiring a custom closet company in Broward County comes down to three verifiable things: who manufactures the panels, who installs them, and who honors the warranty afterward.</p>
-      <p>A company that handles all three keeps responsibility in one place instead of splitting it across a design seller, a separate production facility, and a third-party warranty administrator.</p>
-      <p><a href="#">Built-in closet systems</a> made in-county also get specified for coastal humidity and concrete construction, two conditions a locally based shop encounters on every project.</p>
-
-      <h2 id="who-to-hire">Who Should Broward County Homeowners Hire for a Custom Closet?</h2>
-      <p>The strongest choice is a company that designs, manufactures and installs under one roof, and that can show you finished Broward projects similar in size and budget to yours.</p>
+      <h2 id="who-does-custom-closets">Who Does Custom Closets in Fort Lauderdale?</h2>
+      <p>American Built-In Closets designs, manufactures, and installs custom closets for Fort Lauderdale homes and condos, keeping every stage in-house. <a href="#">Perry Birman</a> opened the business in 1996 and oversees its design and production standards.</p>
+      <p>The work splits into three stages, each handled in-house:</p>
       <ul>
-        <li>Ask where the panels are cut and edge-banded.</li>
-        <li>Confirm the installers are employees, not subcontractors.</li>
-        <li>Get the warranty terms in writing, with the company's name on them.</li>
+        <li><strong>Design:</strong> A designer meets the homeowner in person or by video, then builds a 3D digital model that both sides adjust before anything is cut.</li>
+        <li><strong>Manufacturing:</strong> The company cuts panels to the measured dimensions in its own shop, using materials sourced in North America and Europe.</li>
+        <li><strong>Installation:</strong> A trained crew mounts the system and protects floors and walls during the work.</li>
       </ul>
+      <p>Owning design, cutting, and installation gives homeowners one contact from the first measurement to the final adjustment, whether the project is a bedroom reach-in or a wall of <a href="#">built-in closets</a> in a guest room.</p>
 
-      <h2 id="manufacturer-vs-reseller">What Separates a Custom Closet Manufacturer From a Reseller?</h2>
-      <p>A reseller sells a design and orders the parts from someone else. A manufacturer controls material selection, tolerances and lead times, so changes and repairs move faster.</p>
-      <div class="callout"><p>A closet system is a long-term fixture, not a seasonal purchase. American Built-In Closets manufactures and installs in-house. <a href="#quote">Request a free quote</a>.</p></div>
+      <h2 id="cost">What Does a Custom Closet Cost in Fort Lauderdale?</h2>
+      <p>A custom closet in Fort Lauderdale usually costs between $1,200 and $8,000, and luxury walk-ins can pass $10,000. Closet size, drawer count, hardware grade, and lighting move the number more than anything else.</p>
+      <p>American Built-In Closets cuts its own panels instead of buying finished components, which removes a middle layer of markup from the quote.</p>
+      <div class="table-wrap" role="region" aria-label="Custom closet prices in Fort Lauderdale" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Project or upgrade</th><th scope="col">Typical price</th><th scope="col">What pushes it higher</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Project or upgrade">Basic reach-in</td><td data-label="Typical price">From about $1,200</td><td data-label="What pushes it higher">Extra drawers, specialty shoe or accessory storage</td></tr>
+            <tr><td data-label="Project or upgrade">Small walk-in</td><td data-label="Typical price">From about $2,500</td><td data-label="What pushes it higher">More linear feet of hanging and shelving</td></tr>
+            <tr><td data-label="Project or upgrade">Fully featured walk-in</td><td data-label="Typical price">$4,500 to $8,000+</td><td data-label="What pushes it higher">Islands, drawer banks, floor-to-ceiling shoe walls</td></tr>
+            <tr><td data-label="Project or upgrade">Luxury configuration</td><td data-label="Typical price">Above $10,000</td><td data-label="What pushes it higher">Premium finishes, glass fronts, lighting scenes</td></tr>
+            <tr><td data-label="Project or upgrade">Integrated LED lighting</td><td data-label="Typical price">$300 to $800</td><td data-label="What pushes it higher">Number of zones, motion sensors</td></tr>
+            <tr><td data-label="Project or upgrade">Soft-close hardware upgrade (6 drawers, 4 doors)</td><td data-label="Typical price">$200 to $350</td><td data-label="What pushes it higher">Full-extension glides, high-cycle hinges</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>These ranges are starting points, not quotes. The final price comes from an itemized estimate issued after in-home measurement and a 3D rendering, with panel material, hardware, and labor listed separately. Two quotes only compare fairly when materials, drawer counts, and accessories match line for line.</p>
+      <p>Residential LEDs use at least 75% less energy and last up to 25 times longer than incandescent bulbs, according to the <a href="https://www.energy.gov/energysaver/led-lighting">U.S. Department of Energy</a>, which makes lighting a small line item with a daily payoff.</p>
+      <p>A full breakdown of <a href="#">custom closet costs</a> by material tier helps a homeowner set a budget before the first visit.</p>
 
-      <!-- Mid-article CTA, placed after ~40% of the content -->
+      <h2 id="install-time">How Long Does Custom Closet Installation Take?</h2>
+      <p>Most Fort Lauderdale custom closets are installed in a single working day because every panel arrives pre-cut. Large or luxury walk-ins can take two.</p>
+      <p>The full project takes longer because fabrication happens between design approval and installation day.</p>
+      <div class="table-wrap" role="region" aria-label="Closet installation time by closet type" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Closet type</th><th scope="col">Linear footage</th><th scope="col">Time on site</th><th scope="col">Installers</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Closet type">Reach-in</td><td data-label="Linear footage">4 to 6 feet</td><td data-label="Time on site">One working day</td><td data-label="Installers">1 or 2</td></tr>
+            <tr><td data-label="Closet type">Standard walk-in</td><td data-label="Linear footage">10 to 12 feet</td><td data-label="Time on site">One working day</td><td data-label="Installers">2</td></tr>
+            <tr><td data-label="Closet type">Large or luxury walk-in</td><td data-label="Linear footage">14 to 16 feet or more</td><td data-label="Time on site">Up to two days</td><td data-label="Installers">2 or 3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A project moves from a <a href="#">design consultation</a>, which usually lasts 60 to 90 minutes in the home, to 3D design approval, fabrication, and installation.</p>
+      <p>Fabrication time depends on project size and the production schedule, and large walk-ins with specialty features are most likely to need a second day on site.</p>
+      <p>The installation process ends with a walkthrough in which the homeowner tests each drawer and rod before the crew leaves, so problems get fixed on the spot.</p>
+
+      <h2 id="neighborhoods">Which Fort Lauderdale Neighborhoods Are Served?</h2>
+      <p>American Built-In Closets works throughout Fort Lauderdale, from historic single-family streets to high-rise towers.</p>
+      <p>Housing stock varies inside every neighborhood, so the notes below describe common conditions rather than every home.</p>
+      <h3>Victoria Park</h3>
+      <p>Homes in <a href="#">Victoria Park</a> include 1930s houses, 1940s cottages, and post-war bungalows, and many have a single shallow reach-in behind a door. Some properties are protected by preservation rules or neighborhood guidelines that limit structural changes.</p>
+      <p>Closet systems here fit inside the existing walls, using vertical space and floating shelves, so original trim and floor plans stay as they are.</p>
+      <h3>Las Olas</h3>
+      <p>The <a href="#">Las Olas</a> area mixes high-rise condos with waterfront estates, and both face salt air and steady humidity.</p>
+      <p>Open-concept floor plans often leave little enclosed storage. Systems for these homes use sealed laminates and corrosion-resistant hardware, with walk-ins that can add center islands, glass shelving, and motion-activated lighting.</p>
+      <p>Condo projects also need early coordination with building management on work hours, elevator reservations, and modification approvals.</p>
+      <h3>Coral Ridge</h3>
+      <p>Many family homes in <a href="#">Coral Ridge</a> date from the mid-century period, and their reach-ins fill quickly when several people share them.</p>
+      <p>Layouts here give each family member a separate zone with double hanging, pull-out drawers, and adjustable shelves. Homes near the Intracoastal Waterway get rust-resistant fixtures and moisture-sealed laminates.</p>
+      <h3>Rio Vista</h3>
+      <p>Waterfront houses in <a href="#">Rio Vista</a> often have multiple levels, sloped ceilings, narrow stairwells, and curved walls that standard layouts cannot fit. Designs work around that architecture without demolition.</p>
+      <p>Owners here often ask for lockable jewelry drawers, built-in safes, valet rods, and full-height shoe walls with concealed lighting, finished to match existing millwork.</p>
+
+      <!-- Mid-article CTA: merges the post's "Planning a closet..." line and "Call or Text Us" button into one block -->
       <div class="inline-cta" id="quote">
         <div>
-          <h3>Planning a closet in Broward County?</h3>
-          <p>Get a free in-home design consultation and a line-item quote. Made in South Florida since 1996.</p>
+          <h3>Planning a closet in a Fort Lauderdale home or tower?</h3>
+          <p>American Built-In Closets sizes every panel to the room. Get a free quote, or call or text us now.</p>
         </div>
-        <a class="btn" href="#form">Get My Free Quote</a>
+        <div class="cta-btns">
+          <a class="btn" href="#form">Request a Free Quote</a>
+          <a class="btn ghost-light" href="tel:+19547480800">Call 954-748-0800</a>
+        </div>
       </div>
 
-      <h2 id="local-vs-franchise">Does a Local Manufacturer or a National Franchise Fit a Broward Home Better?</h2>
-      <p>Franchise quotes for equivalent projects often start around $6,000, with scope and materials moving any single number. A local manufacturer can usually match the design at a lower price because there is no franchise fee in the quote.</p>
+      <h2 id="permit">Does a Custom Closet Need a Permit in Fort Lauderdale?</h2>
+      <figure class="inline-img">
+        <img src="https://www.abclosets.com/wp-content/uploads/2026/02/abc5-1.jpg" alt="Custom closet installation in a single-family Fort Lauderdale home" width="623" height="349" loading="lazy">
+      </figure>
+      <p>Whether a closet project needs a Fort Lauderdale building permit depends on the property type, job value, and scope of work, and the City Building Official makes the final call.</p>
+      <p>A Florida law that took effect July 1, 2026, opened a narrow exemption for small single-family projects, but not every closet installation qualifies.</p>
+      <p>The City of Fort Lauderdale lays out the rules on its <a href="https://www.fortlauderdale.gov/Government/Departments/Development-Services/HB-803">HB 803 permitting page</a>:</p>
+      <ul>
+        <li><strong>Eligibility:</strong> Certain work on a single-family home valued under $7,500, based on a licensed contractor’s estimate, can be exempt. Cabinet replacement and other cosmetic, non-structural work appear among the city’s examples, but a specific closet job qualifies only if its actual scope fits.</li>
+        <li><strong>Approval first:</strong> The exemption is not automatic. The owner or contractor submits the Residential Permit Exemption Request form and a job cost estimate through LauderBuild, then waits for written approval before starting work.</li>
+        <li><strong>Exclusions:</strong> Condominiums, apartments, multifamily buildings, and homes in flood hazard areas do not qualify, and neither do electrical, plumbing, mechanical, gas, or structural work.</li>
+        <li><strong>No splitting:</strong> Breaking a larger job into smaller ones to stay under $7,500 is not allowed.</li>
+        <li><strong>Other approvals:</strong> Zoning, setbacks, and HOA or association requirements still apply to exempt work.</li>
+      </ul>
+      <p><a href="#">Closet lighting</a> that needs new circuits counts as electrical work, so it falls outside the exemption.</p>
+      <p>Condo owners and anyone unsure can ask the city’s <a href="https://www.fortlauderdale.gov/Government/Departments/Development-Services/Permitting-Services">Building Services division</a>, which issues permits and runs inspections, before fabrication starts.</p>
 
-      <h2 id="questions-before-signing">What Should a Homeowner Ask Before Signing a Closet Contract?</h2>
-      <p>Ask for panel thickness, drawer box construction, hardware brand and cycle rating, installation labor, and warranty terms as separate lines.</p>
+      <h2 id="humidity">How Do Humidity and Salt Air Affect Closet Materials in Fort Lauderdale?</h2>
+      <p>Coastal humidity wears down closet materials that are not sealed or ventilated. The <a href="https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home">EPA’s mold and moisture guide</a> recommends keeping indoor relative humidity below 60%, ideally between 30% and 50%, and suggests air conditioning, dehumidifiers, and better airflow to get there.</p>
+      <p>Four construction details decide how a closet copes with that moisture:</p>
+      <ul>
+        <li><strong>Panel core:</strong> High-density melamine generally holds its shape in damp air better than standard laminate over low-density particleboard, which can warp under load.</li>
+        <li><strong>Edge sealing:</strong> Factory-sealed edges keep moisture out of the core, while open or poorly bonded edge banding lets it in and starts to peel.</li>
+        <li><strong>Hardware:</strong> Corrosion-resistant hinges, glides, and rods matter most near the beach and the Intracoastal, where salt air reaches inland.</li>
+        <li><strong>Airflow:</strong> Layouts that let air move, along with extra care for closets that share an exterior wall, limit trapped moisture and musty odors.</li>
+      </ul>
+      <p>How long any system lasts also depends on installation quality, daily use, and how well the home controls humidity, so no single lifespan figure fits every Fort Lauderdale closet.</p>
+      <p>A comparison of <a href="#">closet materials</a> shows the trade-offs by tier, which helps a homeowner decide where better panels and hardware earn their cost.</p>
 
-      <h2 id="cities-served">Which Broward Cities Does American Built-In Closets Serve?</h2>
-      <p>Fort Lauderdale, Hollywood, Pembroke Pines, Coral Springs, Weston, Plantation, Davie and the rest of Broward County, plus Miami-Dade and Palm Beach.</p>
+      <h2 id="choose-company">How to Choose a Closet Company in Fort Lauderdale</h2>
+      <p>Choosing a Fort Lauderdale closet company comes down to checking who cuts the panels, who installs them, and what the paperwork promises. Each check takes minutes and protects a purchase that stays in the home for years.</p>
+      <ul>
+        <li><strong>License status:</strong> Use the Florida Department of Business and Professional Regulation’s <a href="https://www.myfloridalicense.com/">license verification tool</a> to look up the company or its contractor by name or license number.</li>
+        <li><strong>Production and crew:</strong> Ask where they cut panels and whether installers are employees or subcontractors.</li>
+        <li><strong>Itemized pricing:</strong> Request a quote that lists panel material, drawer construction, hardware, and labor line by line, which makes <a href="#">comparing closet quotes</a> straightforward.</li>
+        <li><strong>Warranty and service:</strong> Ask for the warranty document, what it covers, and who handles repair calls after installation.</li>
+        <li><strong>Change orders:</strong> Ask how the price changes if final measurements or wall conditions differ from the proposal.</li>
+        <li><strong>Schedule in writing:</strong> Get the fabrication window and installation date on paper.</li>
+        <li><strong>Cancellation rights:</strong> The <a href="https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help">FTC Cooling-Off Rule</a> can allow cancellation until midnight of the third business day for qualifying sales of $25 or more made at home, including invited presentations. Exclusions apply, so whether a given contract qualifies depends on how and where it was finalized.</li>
+      </ul>
+      <p>The same checklist applies anywhere in <a href="#">Broward County</a>, from Hollywood to Deerfield Beach, because the risks of split responsibility don’t change at the city line.</p>
 
-      <h2 id="process">What Does the Design and Installation Process Involve?</h2>
-      <p>Measure and design, approve the 3D drawing, fabrication in our shop, then a scheduled installation, usually in one day for a standard walk-in.</p>
+      <h2 id="contact">Contact Us Today For An Appointment</h2>
+      <div class="contact-band">
+        <p>Free in-home or video design consultations across Fort Lauderdale and Broward County. Fill out the form or call us. We reply within one business day.</p>
+        <div class="cta-btns">
+          <a class="btn" href="#form">Book a Free Consultation</a>
+          <a class="btn ghost" href="tel:+19547480800">Call or Text 954-748-0800</a>
+        </div>
+      </div>
 
       <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq">
-        <details open><summary>How can a homeowner compare closet quotes fairly?</summary><p>Line-item comparison works best: panel material and thickness, drawer box construction, hardware brand and cycle rating, installation labor, and warranty terms.</p></details>
-        <details><summary>Does a condominium or HOA affect who a homeowner can hire?</summary><p>Associations generally leave the choice of company to the owner, but many require proof of insurance, scheduled work hours, and elevator or loading access arrangements.</p></details>
-        <details><summary>How long does a custom closet take from design to install?</summary><p>Most projects take a few weeks from approved design to installation, depending on materials and the size of the space.</p></details>
+        <details open><summary>How much does a custom closet cost in Fort Lauderdale?</summary><p>A custom closet in Fort Lauderdale typically starts near $1,200 for a basic reach-in, while a fully featured walk-in runs about $4,500 to $8,000 or more. The final figure comes from an itemized quote after in-home measurement, since drawers, hardware, and lighting change the total.</p></details>
+        <details><summary>How long does it take to install a custom closet?</summary><p>Installing a custom closet usually takes one working day once panels are cut. Large or luxury walk-ins can need a second day. Consultation, design approval, and fabrication come first, so the whole project takes longer.</p></details>
+        <details><summary>Does a closet system need a permit in Fort Lauderdale?</summary><p>A closet system in Fort Lauderdale may need a building permit depending on scope, and the city decides. Some single-family, non-structural jobs under $7,500 can receive a written HB 803 exemption, but condos, flood-zone homes, and new electrical work are excluded.</p></details>
+        <details><summary>Can a custom closet be installed in a Fort Lauderdale condo?</summary><p>Yes. Custom closets fit Fort Lauderdale condos, including high-rise units near Las Olas, with compact reach-in layouts and vertical storage ideas for <a href="#">condo closet planning</a>. Installers must coordinate work hours, elevator reservations, and proof of insurance with building management.</p></details>
+        <details><summary>Is a custom closet worth it compared to wire shelving?</summary><p>A custom closet often suits Fort Lauderdale homes better than wire shelving, which can corrode at its joints in humid air. Sealed panels and corrosion-resistant hardware handle moisture more reliably, though real value still depends on materials, edge sealing, ventilation, and daily use.</p></details>
+        <details><summary>What closet materials hold up best in Fort Lauderdale humidity?</summary><p>Sealed high-density melamine and properly finished wood veneer tend to hold up better in Fort Lauderdale humidity, because both resist moisture at the surface and edges. Standard laminate over low-density particleboard can warp, and poorly bonded edge banding can peel in damp air.</p></details>
+        <details><summary>What happens after requesting a design consultation?</summary><p>After you request a consultation, a designer measures the closet in your home or reviews measurements you send by video. In Broward County, these consultations are free; the designer builds a 3D model, and the quote itemizes each cost, so the homeowner sees layout and price first.</p></details>
+        <details><summary>Does American Built-In Closets offer virtual design consultations?</summary><p>Yes. American Built-In Closets offers design consultations by video as well as in person. A virtual meeting works best when the homeowner sends accurate measurements, clear photos, and a wardrobe count, while an in-home visit lets the designer confirm dimensions and obstacles directly.</p></details>
+        <details><summary>Can a homeowner cancel a closet contract after signing it?</summary><p>Sometimes. The FTC Cooling-Off Rule covers many sales of $25 or more made at a buyer’s home, including invited visits, until midnight of the third business day. Exclusions apply, including sales finalized at a seller’s permanent business location, so each contract’s circumstances decide.</p></details>
+        <details><summary>Who installs American Built-In Closets systems?</summary><p>American Built-In Closets handles the <a href="#">custom closet installation process</a> with a trained crew instead of passing the job to subcontractors. The crew covers floors, mounts a level frame, adds panels and hardware, then walks the homeowner through every drawer and rod before leaving.</p></details>
       </div>
 
       <h2 id="bottom-line">Bottom Line</h2>
-      <p>Hiring well in Broward County means checking where panels are made, who installs them, and who services the warranty.</p>
-      <p>Quotes for the same closet vary widely in this market, so a line-item comparison shows what a bundled price hides.</p>
+      <p>Budget planning starts with closet type, drawer count, and lighting zones, since those decide where a Fort Lauderdale project lands in the price range. A <a href="#">master bedroom closet</a> for two people usually sits higher in that range than a single reach-in.</p>
+      <p>Single-family owners with small cosmetic jobs need written city approval before relying on the HB 803 exemption, and condo owners should plan around permits and building rules.</p>
+      <p>Near the coast, sealed panels, corrosion-resistant hardware, and airflow matter most, and a company that cuts its own panels and handles installation itself keeps responsibility in one place.</p>
+      <div class="callout"><p>An overstuffed Fort Lauderdale closet is a fixable problem. American Built-In Closets has measured, built, and installed closets in South Florida since 1996. <a href="#form">Request a free design consultation</a>.</p></div>
 
       <div class="share-end">
-        <div class="tags"><a href="#">Broward County</a><a href="#">Hiring Guide</a><a href="#">Walk-In Closets</a></div>
+        <div class="tags"><a href="#">Fort Lauderdale</a><a href="#">Closet Costs</a><a href="#">Permits</a><a href="#">Walk-In Closets</a></div>
         <div class="share" aria-label="Share this article">
           <span class="lbl">Found this helpful? Share it</span>
           <a href="#" aria-label="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
@@ -339,9 +475,9 @@
       <section class="related" aria-labelledby="related-h">
         <h2 id="related-h">Related Articles</h2>
         <div class="cards">
-          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Condos</small><h3>Closet Solutions for South Florida High-Rise Apartments</h3></div></a>
-          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Cost Guide</small><h3>Built-In Closets vs. Wire Shelving: Cost and Durability</h3></div></a>
-          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Accessibility</small><h3>Designing an ADA-Compliant Custom Closet</h3></div></a>
+          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Cost Guide</small><h3>Custom Closet Costs in South Florida by Material Tier</h3></div></a>
+          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Materials</small><h3>Best Materials for Custom Closets in a Humid Climate</h3></div></a>
+          <a class="card" href="#"><div class="ph"></div><div class="b"><small>Hiring Guide</small><h3>Who to Hire for a Custom Closet in Broward County</h3></div></a>
         </div>
       </section>
     </article>
