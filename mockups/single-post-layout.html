@@ -52,6 +52,9 @@
   .crumbs span{margin:0 6px}
   .chip{display:inline-block;background:var(--tint);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px}
   h1{font-size:40px;line-height:1.18;color:var(--heading);margin:0 0 14px;font-weight:700;text-wrap:balance;letter-spacing:-.01em}
+  /* Titles with a colon: always break after the colon so no single word is left on that line.
+     WordPress adds these spans automatically (see title-colon-break.php). */
+  h1 .title-main,h1 .title-sub{display:block;text-wrap:balance}
   .dek{font-size:18px;color:var(--muted);margin:0 0 16px;max-width:60ch}
   .meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
   .avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;flex:none}
@@ -251,7 +254,7 @@
       <div>
         <p class="crumbs"><a href="#">Home</a><span>›</span><a href="#">Blog</a><span>›</span>Fort Lauderdale</p>
         <span class="chip">Cost &amp; Planning Guide · Fort Lauderdale</span>
-        <h1>Custom Closets in Fort Lauderdale: Cost, Timeline, and How to Choose a Builder</h1>
+        <h1><span class="title-main">Custom Closets in Fort Lauderdale:</span> <span class="title-sub">Cost, Timeline, and How to Choose a&nbsp;Builder</span></h1>
         <p class="dek">What custom closets cost, how long they take to install, and how to pick a builder you can trust.</p>
         <div class="byline-row">
         <div class="meta">
