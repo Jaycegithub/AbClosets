@@ -279,16 +279,20 @@ CSS = f"""
 
 /* Sidebar contact form */
 .e-con.abc-form-box{{--gap:0;--row-gap:0px;--column-gap:0px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0;border:1px solid {LINE};border-radius:6px;overflow:hidden;background:#fff}}
-.e-con.abc-form-hd{{background:{GREEN};--padding-top:18px;--padding-bottom:18px;--padding-left:22px;--padding-right:22px;--gap:4px;--row-gap:4px;--column-gap:4px}}
+.e-con.abc-form-hd{{background:{GREEN};--padding-top:20px;--padding-bottom:20px;--padding-left:24px;--padding-right:24px;--gap:6px;--row-gap:6px;--column-gap:6px}}
 .abc-form-title .elementor-heading-title{{color:#fff;font-size:20px;line-height:1.3;font-weight:700;margin:0;font-family:Roboto,Arial,sans-serif}}
 .abc-form-sub p{{color:#fff;opacity:.92;font-size:14px;line-height:1.45;margin:0}}
-.abc-form{{padding:18px 22px 8px}}
-.abc-form .wpcf7-form p{{margin:0 0 12px}}
-.abc-form input:not([type=submit]):not([type=hidden]),.abc-form textarea{{width:100%;font:inherit;font-size:15px;border:1px solid #C9CED6;border-radius:4px;padding:10px 12px;color:{TEXT};background:#fff;box-sizing:border-box}}
-.abc-form textarea{{min-height:90px;max-height:160px;resize:vertical}}
-.abc-form input[type=submit]{{width:100%;background:{NAVY};color:#fff;border:0;border-radius:4px;padding:12px 20px;font-size:15px;font-weight:500;cursor:pointer}}
+.abc-form{{padding:22px 24px 6px}}
+.abc-form .wpcf7-form p,.abc-form .wpcf7-form .inputs{{margin:0 0 14px}}
+.abc-form .wpcf7-form-control-wrap{{display:block}}
+.abc-form .wpcf7-not-valid-tip{{font-size:12px;margin-top:4px}}
+.abc-form .wpcf7-response-output{{margin:4px 0 12px!important;font-size:13px;border-radius:4px}}
+.abc-form input:not([type=submit]):not([type=hidden]),.abc-form textarea{{width:100%;font:inherit;font-size:15px;border:1px solid #C9CED6;border-radius:6px;padding:12px 14px;color:{TEXT};background:#fff;box-sizing:border-box;transition:border-color .15s,box-shadow .15s}}
+.abc-form input:not([type=submit]):focus,.abc-form textarea:focus{{border-color:{NAVY};box-shadow:0 0 0 3px rgba(4,70,164,.15);outline:none}}
+.abc-form textarea{{min-height:110px;height:120px;max-height:180px;resize:vertical;display:block}}
+.abc-form input[type=submit]{{width:100%;background:{NAVY};color:#fff;border:0;border-radius:6px;padding:14px 20px;margin-top:4px;font-size:15px;font-weight:500;cursor:pointer}}
 .abc-form input[type=submit]:hover{{background:{NAVY_DARK}}}
-.abc-form-call{{padding:0 22px 18px;text-align:center}}
+.abc-form-call{{padding:4px 24px 22px;text-align:center}}
 .abc-form-call p{{margin:0;font-size:14px;color:{MUTED}}}
 .abc-form-call a{{font-weight:700;color:{HEADING};text-decoration:none;font-size:16px}}
 
