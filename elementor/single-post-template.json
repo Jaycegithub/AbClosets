@@ -1,0 +1,641 @@
+{
+ "title": "Single Post – New Layout",
+ "type": "single-post",
+ "content": [
+  {
+   "id": "4edc51b",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "css_classes": "abc-hero",
+    "flex_direction_tablet": "column"
+   },
+   "elements": [
+    {
+     "id": "345de4a",
+     "elType": "widget",
+     "widgetType": "progress-tracker",
+     "settings": {
+      "_css_classes": "abc-progress",
+      "type": "horizontal",
+      "relative_to": "post_content",
+      "percentage": "",
+      "direction": "ltr",
+      "horizontal_height": {
+       "unit": "px",
+       "size": 4
+      },
+      "horizontal_color_background": "classic",
+      "horizontal_color_color": "#198C51",
+      "horizontal_background_color_background": "classic",
+      "horizontal_background_color_color": "rgba(0,0,0,0)",
+      "horizontal_border_radius": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "horizontal_tracker_border_radius": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": []
+    },
+    {
+     "id": "67b5ac3",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "css_classes": "abc-hero-text"
+     },
+     "elements": [
+      {
+       "id": "e1cb12c",
+       "elType": "widget",
+       "widgetType": "shortcode",
+       "settings": {
+        "_css_classes": "abc-crumbs",
+        "shortcode": "[rank_math_breadcrumb]"
+       },
+       "elements": []
+      },
+      {
+       "id": "4f48d47",
+       "elType": "widget",
+       "widgetType": "theme-post-title",
+       "settings": {
+        "_css_classes": "abc-title",
+        "header_size": "h1",
+        "title": "Post Title",
+        "__dynamic__": {
+         "title": "[elementor-tag id=\"1083621\" name=\"post-title\" settings=\"%7B%7D\"]"
+        }
+       },
+       "elements": []
+      },
+      {
+       "id": "3993a6f",
+       "elType": "widget",
+       "widgetType": "theme-post-excerpt",
+       "settings": {
+        "_css_classes": "abc-dek",
+        "__dynamic__": {
+         "excerpt": "[elementor-tag id=\"b85a532\" name=\"post-excerpt\" settings=\"%7B%22max_length%22%3A%2232%22%7D\"]"
+        }
+       },
+       "elements": []
+      },
+      {
+       "id": "0e43d95",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "css_classes": "abc-byline-row"
+       },
+       "elements": [
+        {
+         "id": "53a19e0",
+         "elType": "container",
+         "isInner": false,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "css_classes": "abc-byline"
+         },
+         "elements": [
+          {
+           "id": "55e36f2",
+           "elType": "container",
+           "isInner": false,
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "abc-byline-text"
+           },
+           "elements": [
+            {
+             "id": "e6585d5",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "_css_classes": "abc-by",
+              "editor": "<p>By <strong>Perry Birman</strong>, Founder</p>"
+             },
+             "elements": []
+            },
+            {
+             "id": "f6fec46",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "_css_classes": "abc-updated",
+              "title": "Updated",
+              "header_size": "p",
+              "__dynamic__": {
+               "title": "[elementor-tag id=\"0225543\" name=\"post-date\" settings=\"%7B%22type%22%3A%22post_modified_gmt%22%2C%22format%22%3A%22F+j%2C+Y%22%2C%22before%22%3A%22Updated+%22%7D\"]"
+              }
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "d954e03",
+         "elType": "widget",
+         "widgetType": "share-buttons",
+         "settings": {
+          "_css_classes": "abc-share abc-share-top",
+          "share_buttons": [
+           {
+            "_id": "cd18d14",
+            "button": "facebook"
+           },
+           {
+            "_id": "556e7db",
+            "button": "x-twitter"
+           },
+           {
+            "_id": "552deff",
+            "button": "pinterest"
+           },
+           {
+            "_id": "8e7c933",
+            "button": "email"
+           }
+          ],
+          "view": "icon",
+          "skin": "framed",
+          "shape": "circle",
+          "columns": "0",
+          "alignment": "left",
+          "color_source": "custom",
+          "primary_color": "#1E2633",
+          "secondary_color": "#FFFFFF",
+          "primary_color_hover": "#0446A4",
+          "secondary_color_hover": "#FFFFFF",
+          "button_size": {
+           "unit": "px",
+           "size": 0.9
+          },
+          "icon_size": {
+           "unit": "em",
+           "size": 1.1
+          },
+          "border_size": {
+           "unit": "px",
+           "size": 1
+          }
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "f2f92cc",
+     "elType": "widget",
+     "widgetType": "theme-post-featured-image",
+     "settings": {
+      "_css_classes": "abc-hero-img",
+      "image_size": "large",
+      "__dynamic__": {
+       "image": "[elementor-tag id=\"d8fd86e\" name=\"post-featured-image\" settings=\"%7B%7D\"]"
+      }
+     },
+     "elements": []
+    }
+   ]
+  },
+  {
+   "id": "60bb0cf",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "css_classes": "abc-body",
+    "flex_direction_tablet": "column"
+   },
+   "elements": [
+    {
+     "id": "1500b79",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "css_classes": "abc-article"
+     },
+     "elements": [
+      {
+       "id": "2c8e625",
+       "elType": "widget",
+       "widgetType": "table-of-contents",
+       "settings": {
+        "_css_classes": "abc-toc-inline",
+        "title": "In this article",
+        "html_tag": "h2",
+        "headings_by_tags": [
+         "h2"
+        ],
+        "container": ".abc-content",
+        "marker_view": "bullets",
+        "hierarchical_view": "",
+        "collapse_subitems": "",
+        "word_wrap": "yes",
+        "minimize_box": "yes",
+        "minimized_on": "tablet",
+        "hide_desktop": "hidden-desktop"
+       },
+       "elements": []
+      },
+      {
+       "id": "dced853",
+       "elType": "widget",
+       "widgetType": "theme-post-content",
+       "settings": {
+        "_css_classes": "abc-content"
+       },
+       "elements": []
+      },
+      {
+       "id": "6e79173",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "css_classes": "abc-share-end"
+       },
+       "elements": [
+        {
+         "id": "8d16568",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "_css_classes": "abc-share-label",
+          "title": "Found this helpful? Share it",
+          "header_size": "p"
+         },
+         "elements": []
+        },
+        {
+         "id": "e8a3cea",
+         "elType": "widget",
+         "widgetType": "share-buttons",
+         "settings": {
+          "_css_classes": "abc-share",
+          "share_buttons": [
+           {
+            "_id": "84b6555",
+            "button": "facebook"
+           },
+           {
+            "_id": "90c942d",
+            "button": "x-twitter"
+           },
+           {
+            "_id": "122788b",
+            "button": "pinterest"
+           },
+           {
+            "_id": "3eb6d5d",
+            "button": "email"
+           }
+          ],
+          "view": "icon",
+          "skin": "framed",
+          "shape": "circle",
+          "columns": "0",
+          "alignment": "left",
+          "color_source": "custom",
+          "primary_color": "#1E2633",
+          "secondary_color": "#FFFFFF",
+          "primary_color_hover": "#0446A4",
+          "secondary_color_hover": "#FFFFFF",
+          "button_size": {
+           "unit": "px",
+           "size": 0.9
+          },
+          "icon_size": {
+           "unit": "em",
+           "size": 1.1
+          },
+          "border_size": {
+           "unit": "px",
+           "size": 1
+          }
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "d44488b",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "abc-author"
+       },
+       "elements": [
+        {
+         "id": "25aad9c",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "_css_classes": "abc-eyebrow",
+          "title": "About the author",
+          "header_size": "p"
+         },
+         "elements": []
+        },
+        {
+         "id": "f447421",
+         "elType": "widget",
+         "widgetType": "author-box",
+         "settings": {
+          "_css_classes": "abc-author-box",
+          "source": "custom",
+          "author_name": "Perry Birman",
+          "author_name_tag": "h3",
+          "show_avatar": "",
+          "author_website": {
+           "url": "https://www.abclosets.com/about/",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "author_bio": "Perry Birman founded American Built-In Closets in 1996. With nearly 30 years in furniture manufacturing and custom storage design, he has overseen thousands of closet, garage, pantry and home office installations across Miami-Dade, Broward and Palm Beach counties.",
+          "posts_url": {
+           "url": "https://www.abclosets.com/about/",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "link_text": "Read Perry’s full bio",
+          "layout": "left",
+          "alignment": "left",
+          "avatar_size": {
+           "unit": "px",
+           "size": 88
+          }
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "faf5208",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "abc-related"
+       },
+       "elements": [
+        {
+         "id": "d812583",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "_css_classes": "abc-related-title",
+          "title": "Related Articles",
+          "header_size": "h2"
+         },
+         "elements": []
+        },
+        {
+         "id": "0e66010",
+         "elType": "widget",
+         "widgetType": "posts",
+         "settings": {
+          "_css_classes": "abc-related-posts",
+          "_skin": "classic",
+          "classic_columns": "3",
+          "classic_columns_tablet": "2",
+          "classic_columns_mobile": "1",
+          "classic_posts_per_page": 3,
+          "classic_thumbnail": "top",
+          "classic_thumbnail_size_size": "medium_large",
+          "classic_item_ratio": {
+           "unit": "px",
+           "size": 0.62
+          },
+          "classic_show_title": "yes",
+          "classic_title_tag": "h3",
+          "classic_show_excerpt": "",
+          "classic_meta_data": [],
+          "classic_show_read_more": "",
+          "posts_post_type": "related",
+          "posts_related_taxonomies": [
+           "category"
+          ],
+          "posts_related_fallback": "fallback_recent",
+          "posts_exclude": [
+           "current_post"
+          ],
+          "pagination_type": ""
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8bc3f32",
+     "elType": "container",
+     "isInner": false,
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "css_classes": "abc-sidebar"
+     },
+     "elements": [
+      {
+       "id": "618e938",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "abc-form-box"
+       },
+       "elements": [
+        {
+         "id": "8148a37",
+         "elType": "container",
+         "isInner": false,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "css_classes": "abc-form-hd"
+         },
+         "elements": [
+          {
+           "id": "3c21377",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "_css_classes": "abc-form-title",
+            "title": "Get a Free Design Consultation",
+            "header_size": "h2"
+           },
+           "elements": []
+          },
+          {
+           "id": "6ca7542",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "_css_classes": "abc-form-sub",
+            "editor": "<p>Tell us about your space. We reply within one business day.</p>"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "748ddab",
+         "elType": "widget",
+         "widgetType": "shortcode",
+         "settings": {
+          "_css_classes": "abc-form",
+          "shortcode": "[contact-form-7 id=\"61\" title=\"Sidebar\"]"
+         },
+         "elements": []
+        },
+        {
+         "id": "e0dbb14",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "_css_classes": "abc-form-call",
+          "editor": "<p>or call / text <a href=\"tel:+19547480800\">954-748-0800</a></p>"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "5112758",
+       "elType": "container",
+       "isInner": false,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "abc-sticky"
+       },
+       "elements": [
+        {
+         "id": "a1748eb",
+         "elType": "widget",
+         "widgetType": "table-of-contents",
+         "settings": {
+          "_css_classes": "abc-toc-side",
+          "title": "In this article",
+          "html_tag": "h2",
+          "headings_by_tags": [
+           "h2"
+          ],
+          "container": ".abc-content",
+          "marker_view": "bullets",
+          "hierarchical_view": "",
+          "collapse_subitems": "",
+          "word_wrap": "yes",
+          "minimize_box": "",
+          "hide_tablet": "hidden-tablet",
+          "hide_mobile": "hidden-mobile"
+         },
+         "elements": []
+        },
+        {
+         "id": "3a3155b",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "_css_classes": "abc-trust",
+          "view": "traditional",
+          "icon_list": [
+           {
+            "_id": "aaf42d6",
+            "text": "Since 1996 – family-owned in South Florida",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "d77cacd",
+            "text": "Made in-house – designed, built and installed by our team",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "cc8766d",
+            "text": "20-year warranty on every system",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "icon_color": "#198C51",
+          "text_color": "#373737"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cd56855",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "flex_direction": "column",
+    "css_classes": "abc-helpers"
+   },
+   "elements": [
+    {
+     "id": "8c36367",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "_css_classes": "abc-mobile-bar-wrap",
+      "html": "<nav class=\"abc-mobile-bar\" aria-label=\"Contact\"><a href=\"tel:+19547480800\">Call Now</a><a href=\"#abc-form\">Free Quote</a></nav>\n<script>\ndocument.addEventListener('DOMContentLoaded',function(){\n  /* reading time next to the Updated date */\n  var c=document.querySelector('.abc-content'),u=document.querySelector('.abc-updated .elementor-heading-title');\n  if(c&&u){var n=(c.innerText||'').trim().split(/\\s+/).length;var m=Math.max(1,Math.round(n/225));\n    var s=document.createElement('span');s.className='abc-readtime';s.textContent=' \\u00b7 '+m+' min read';u.appendChild(s);}\n  /* anchor for the Free Quote button */\n  var f=document.querySelector('.abc-form-box');if(f&&!f.id)f.id='abc-form';\n});\n</script>"
+     },
+     "elements": []
+    }
+   ]
+  }
+ ],
+ "page_settings": {
+  "preview_type": "single/post",
+  "preview_id": 2534,
+  "custom_css": "/* ===== AB Closets single post template ===== */\n.abc-hero,.abc-body,.abc-helpers{--abc-navy:#0446A4;--abc-green:#198C51;--abc-text:#373737;--abc-heading:#1E2633;--abc-muted:#5F6672;--abc-line:#E3E6EB;font-family:Roboto,Arial,sans-serif}\n\n/* Spacing comes from container gaps, not Elementor's default 20px under each widget */\n.abc-hero .elementor-widget:not(:last-child),.abc-body .elementor-widget:not(:last-child){margin-block-end:0}\n.abc-by p{margin:0}\n\n/* Hero: compact split, title on solid background (never over the photo) */\n.e-con.abc-hero{--content-width:1200px;--padding-top:28px;--padding-bottom:28px;--padding-left:24px;--padding-right:24px;--gap:48px;--row-gap:48px;--column-gap:48px;--align-items:center;background:#F5F5F5;border-bottom:1px solid #E3E6EB}\n.e-con.abc-hero-text{--width:58%;--gap:14px;--row-gap:14px;--column-gap:14px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0}\n.abc-hero-img{width:42%;flex:none}\n.abc-hero-img img{width:100%;aspect-ratio:3/2;max-height:310px;object-fit:cover;border-radius:6px;box-shadow:0 10px 30px rgba(30,38,51,.12);display:block}\n.abc-crumbs,.abc-crumbs a{font-size:13px;color:#5F6672;text-decoration:none}\n.abc-crumbs a:hover{text-decoration:underline}\n.abc-crumbs:empty{display:none}\n.abc-title .elementor-heading-title{font-family:Roboto,Arial,sans-serif;font-size:40px;line-height:1.18;font-weight:700;color:#1E2633;letter-spacing:-.01em;text-wrap:balance;margin:0}\n/* Colon rule: the part after \":\" always starts on its own line (spans added by title-colon-break.php) */\n.abc-title .title-main,.abc-title .title-sub{display:block;text-wrap:balance}\n.abc-dek,.abc-dek p{font-size:18px;line-height:1.6;color:#5F6672;margin:0}\n.e-con.abc-byline-row{--gap:16px;--row-gap:16px;--column-gap:16px;--align-items:center;--justify-content:space-between;--flex-wrap:wrap;--padding-top:4px;--padding-bottom:0;--padding-left:0;--padding-right:0}\n.e-con.abc-byline{--gap:12px;--row-gap:12px;--column-gap:12px;--align-items:center;--width:auto;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0}\n.e-con.abc-byline-text{--gap:0;--row-gap:0px;--column-gap:0px;--width:auto;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0}\n.abc-avatar img{width:44px;height:44px;border-radius:50%;object-fit:cover;display:block}\n.abc-by p,.abc-updated .elementor-heading-title{margin:0;font-size:14px;line-height:1.5;color:#5F6672;font-weight:400;font-family:Roboto,Arial,sans-serif}\n.abc-by strong{color:#1E2633}\n\n/* Share buttons */\n.abc-share .elementor-share-btn{width:36px;height:36px;border-radius:50%}\n.abc-share .elementor-grid{--grid-column-gap:8px;--grid-row-gap:8px}\n\n/* Progress bar fixed to the top of the window */\n.abc-progress{position:fixed!important;top:0;left:0;right:0;width:100%!important;z-index:9999;margin:0!important;pointer-events:none}\n.abc-progress .elementor-scrolling-tracker{border-radius:0}\n\n/* Body layout */\n.e-con.abc-body{--content-width:1200px;--padding-top:44px;--padding-bottom:64px;--padding-left:24px;--padding-right:24px;--gap:56px;--row-gap:56px;--column-gap:56px;--align-items:flex-start}\n.e-con.abc-article{--width:auto;flex:1 1 0;min-width:0;max-width:740px;--gap:0;--row-gap:0px;--column-gap:0px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0}\n.e-con.abc-sidebar{--width:340px;flex:none;--gap:24px;--row-gap:24px;--column-gap:24px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0;align-self:stretch}\n.e-con.abc-sticky{position:sticky;top:110px;--gap:24px;--row-gap:24px;--column-gap:24px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0}\n\n/* Article typography */\n.abc-content{font-size:17px;line-height:1.7;color:#373737}\n.abc-content h2{font-size:28px;line-height:1.25;color:#1E2633;margin:44px 0 14px;scroll-margin-top:110px;font-weight:700}\n.abc-content h3{font-size:20px;color:#1E2633;margin:28px 0 8px;font-weight:700}\n.abc-content p{margin:0 0 18px}\n.abc-content a{color:#0446A4}\n.abc-content img{border-radius:6px;height:auto}\n.abc-content table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}\n.abc-content th{background:#0446A4;color:#fff;text-align:left;font-weight:500;padding:12px 14px}\n.abc-content td{padding:11px 14px;border-top:1px solid #E3E6EB;vertical-align:top}\n.abc-content tbody tr:nth-child(even){background:#F5F5F5}\n.abc-content .wp-block-table,.abc-content figure.wp-block-table{overflow-x:auto;border:1px solid #E3E6EB;border-radius:6px;margin:6px 0 24px}\n\n/* Table of contents */\n.abc-toc-side,.abc-toc-inline{--box-border-color:#E3E6EB;--box-border-radius:6px;--box-padding:18px 20px;--header-color:#5F6672;--item-text-color:#373737;--item-text-hover-color:#0446A4;--item-text-active-color:#0446A4;--marker-color:#198C51}\n.abc-toc-side .elementor-toc__header-title{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#5F6672;font-weight:700}\n.abc-toc-side .elementor-toc__list-item-text{font-size:14px;line-height:1.4}\n.abc-toc-side .elementor-toc__body{max-height:46vh;overflow:auto}\n.abc-toc-side .elementor-item-active{font-weight:500}\n.abc-toc-inline{margin-bottom:28px}\n.abc-toc-inline .elementor-toc__header-title{font-size:16px;color:#1E2633;font-weight:700}\n\n/* Sidebar contact form */\n.e-con.abc-form-box{--gap:0;--row-gap:0px;--column-gap:0px;--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0;border:1px solid #E3E6EB;border-radius:6px;overflow:hidden;background:#fff}\n.e-con.abc-form-hd{background:#198C51;--padding-top:18px;--padding-bottom:18px;--padding-left:22px;--padding-right:22px;--gap:4px;--row-gap:4px;--column-gap:4px}\n.abc-form-title .elementor-heading-title{color:#fff;font-size:20px;line-height:1.3;font-weight:700;margin:0;font-family:Roboto,Arial,sans-serif}\n.abc-form-sub p{color:#fff;opacity:.92;font-size:14px;line-height:1.45;margin:0}\n.abc-form{padding:18px 22px 8px}\n.abc-form .wpcf7-form p{margin:0 0 12px}\n.abc-form input:not([type=submit]):not([type=hidden]),.abc-form textarea{width:100%;font:inherit;font-size:15px;border:1px solid #C9CED6;border-radius:4px;padding:10px 12px;color:#373737;background:#fff;box-sizing:border-box}\n.abc-form textarea{min-height:90px;max-height:160px;resize:vertical}\n.abc-form input[type=submit]{width:100%;background:#0446A4;color:#fff;border:0;border-radius:4px;padding:12px 20px;font-size:15px;font-weight:500;cursor:pointer}\n.abc-form input[type=submit]:hover{background:#03357D}\n.abc-form-call{padding:0 22px 18px;text-align:center}\n.abc-form-call p{margin:0;font-size:14px;color:#5F6672}\n.abc-form-call a{font-weight:700;color:#1E2633;text-decoration:none;font-size:16px}\n\n/* Trust points */\n.abc-trust{border:1px solid #E3E6EB;border-radius:6px;padding:18px 20px;background:#fff}\n.abc-trust .elementor-icon-list-text{font-size:14px;line-height:1.4;color:#373737}\n.abc-trust .elementor-icon-list-item{align-items:flex-start;padding-bottom:10px}\n\n/* Share row at the end */\n.e-con.abc-share-end{--gap:16px;--row-gap:16px;--column-gap:16px;--align-items:center;--justify-content:space-between;--flex-wrap:wrap;border-top:1px solid #E3E6EB;border-bottom:1px solid #E3E6EB;--padding-top:16px;--padding-bottom:16px;--padding-left:0;--padding-right:0;margin:40px 0 32px}\n.abc-share-label .elementor-heading-title{font-size:14px;color:#5F6672;margin:0;font-weight:400;font-family:Roboto,Arial,sans-serif}\n\n/* Author box */\n.e-con.abc-author{border:1px solid #E3E6EB;border-radius:6px;--padding-top:24px;--padding-bottom:24px;--padding-left:26px;--padding-right:26px;--gap:6px;--row-gap:6px;--column-gap:6px;background:#fff}\n.abc-eyebrow .elementor-heading-title{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#198C51;margin:0;font-family:Roboto,Arial,sans-serif}\n.abc-author-box .elementor-author-box__avatar img{width:88px;height:88px;object-fit:cover;border-radius:50%}\n.abc-author-box .elementor-author-box__name{font-size:22px;color:#1E2633;font-weight:700;margin:0 0 6px;font-family:Roboto,Arial,sans-serif}\n.abc-author-box .elementor-author-box__bio{font-size:15px;line-height:1.6;color:#373737}\n.abc-author-box .elementor-author-box__button{border:1.5px solid #0446A4;color:#0446A4;border-radius:4px;font-size:14px;font-weight:500;padding:8px 14px;background:transparent}\n.abc-author-box .elementor-author-box__button:hover{background:#0446A4;color:#fff}\n\n/* Related articles */\n.e-con.abc-related{--padding-top:48px;--padding-bottom:0;--padding-left:0;--padding-right:0;--gap:16px;--row-gap:16px;--column-gap:16px}\n.abc-related-title .elementor-heading-title{font-size:28px;color:#1E2633;font-weight:700;margin:0;font-family:Roboto,Arial,sans-serif}\n.abc-related-posts .elementor-post{border:1px solid #E3E6EB;border-radius:6px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s}\n.abc-related-posts .elementor-post:hover{box-shadow:0 8px 24px rgba(30,38,51,.1);transform:translateY(-2px)}\n.abc-related-posts .elementor-post__thumbnail__link{margin-bottom:0!important}\n.abc-related-posts .elementor-post__text{padding:14px 16px 18px}\n.abc-related-posts .elementor-post__title,.abc-related-posts .elementor-post__title a{font-size:16px;line-height:1.35;color:#1E2633;font-weight:700}\n\n/* Mobile call / quote bar */\n.e-con.abc-helpers{--padding-top:0;--padding-bottom:0;--padding-left:0;--padding-right:0;--min-height:0}\n.abc-mobile-bar{display:none}\n\n/* Tablet and below: stack layout, inline TOC */\n@media (max-width:1024px){\n  .abc-hero-img{width:100%}\n  .e-con.abc-hero-text{--width:100%}\n  .abc-hero-img img{aspect-ratio:16/9;max-height:none}\n  .e-con.abc-hero{--gap:24px;--row-gap:24px;--column-gap:24px;--padding-top:24px}\n  .e-con.abc-article{max-width:none;width:100%}\n  .e-con.abc-sidebar{--width:100%}\n  .e-con.abc-sticky{position:static}\n  .e-con.abc-body{--gap:36px;--row-gap:36px;--column-gap:36px;--padding-top:28px}\n}\n/* Phones */\n@media (max-width:767px){\n  .e-con.abc-hero,.e-con.abc-body{--padding-left:16px;--padding-right:16px}\n  .abc-title .elementor-heading-title{font-size:30px}\n  .abc-dek,.abc-dek p{font-size:16px}\n  .abc-content{font-size:16px}\n  .abc-content h2{font-size:23px}\n  .abc-mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:9998;box-shadow:0 -4px 16px rgba(0,0,0,.12)}\n  .abc-mobile-bar a{padding:15px 10px;text-align:center;font-weight:700;text-decoration:none;color:#fff;font-size:15px;font-family:Roboto,Arial,sans-serif}\n  .abc-mobile-bar a:first-child{background:#0446A4}\n  .abc-mobile-bar a:last-child{background:#198C51}\n  body.single-post{padding-bottom:52px}\n}"
+ }
+}
