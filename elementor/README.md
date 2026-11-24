@@ -16,3 +16,10 @@ Standard Elementor/PRO Elements widgets only (no Atomic Editor). Built and updat
 - Test (current): `{"conditions":[{"type":"include","name":"singular","sub_name":"post","sub_id":"2534"}]}`
 - All posts: `{"conditions":[{"type":"include","name":"singular","sub_name":"post"}]}`
 - Undo: `{"conditions":[]}`
+
+## WP Rocket
+WP Rocket "Remove Unused CSS" stores a cut-down CSS copy per URL that is missing Elementor's layout CSS
+for this template. `rucss-exclude-posts.php` (added to the theme's functions.php) excludes blog posts from
+Remove Unused CSS using WP Rocket's own per-post exclusion (`_rocket_exclude_remove_unused_css`).
+Pages keep Remove Unused CSS. Always verify changes as a visitor (normal URL, no query string) and
+re-check after a few minutes, once WP Rocket has processed the page.
