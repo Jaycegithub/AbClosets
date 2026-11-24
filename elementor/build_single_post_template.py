@@ -183,7 +183,7 @@ helpers = con("abc-helpers", [
     w("html", "abc-mobile-bar-wrap", html=(
         f'<nav class="abc-mobile-bar" aria-label="Contact">'
         f'<a href="tel:{PHONE_TEL}">Call Now</a><a href="#abc-form">Free Quote</a></nav>\n'
-        "<script>\n"
+        "<script nowprocket>\n"
         "document.addEventListener('DOMContentLoaded',function(){\n"
         "  /* reading time next to the Updated date */\n"
         "  var c=document.querySelector('.abc-content'),u=document.querySelector('.abc-updated .elementor-heading-title');\n"
@@ -358,7 +358,8 @@ CSS = f"""
   .e-con.abc-hero{{--padding-top:24px;--padding-bottom:28px}}
   .e-con.abc-author{{--padding-left:20px;--padding-right:20px}}
   /* tables become one card per row */
-  .abc-content figure.wp-block-table{{box-shadow:none;background:transparent;overflow:visible}}
+  .abc-content figure.wp-block-table{{box-shadow:none;background:transparent;overflow-x:auto}}
+  .abc-content figure.wp-block-table:has(table.abc-stack){{overflow:visible}}
   .abc-content .wp-block-table table.abc-stack{{min-width:0}}
   .abc-content table.abc-stack,.abc-content table.abc-stack tbody{{display:block}}
   .abc-content table.abc-stack tr.abc-thead{{display:none}}
